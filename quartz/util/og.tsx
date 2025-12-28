@@ -205,7 +205,7 @@ export const defaultImage: SocialImageOptions["imageStructure"] = ({
         flexDirection: "column",
         height: "100%",
         width: "100%",
-        backgroundColor: cfg.theme.colors[colorScheme].light,
+        backgroundColor: cfg.theme.colors[colorScheme].base,
         padding: "2.5rem",
         fontFamily: bodyFont,
       }}
@@ -233,7 +233,7 @@ export const defaultImage: SocialImageOptions["imageStructure"] = ({
           style={{
             display: "flex",
             fontSize: 32,
-            color: cfg.theme.colors[colorScheme].gray,
+            color: cfg.theme.colors[colorScheme].depth0,
             fontFamily: bodyFont,
           }}
         >
@@ -255,7 +255,7 @@ export const defaultImage: SocialImageOptions["imageStructure"] = ({
             fontSize: useSmallerFont ? 64 : 72,
             fontFamily: headerFont,
             fontWeight: 700,
-            color: cfg.theme.colors[colorScheme].dark,
+            color: cfg.theme.colors[colorScheme].text,
             lineHeight: 1.2,
             display: "-webkit-box",
             WebkitBoxOrient: "vertical",
@@ -274,7 +274,7 @@ export const defaultImage: SocialImageOptions["imageStructure"] = ({
           display: "flex",
           flex: 1,
           fontSize: 36,
-          color: cfg.theme.colors[colorScheme].darkgray,
+          color: cfg.theme.colors[colorScheme].text,
           lineHeight: 1.4,
         }}
       >
@@ -300,7 +300,7 @@ export const defaultImage: SocialImageOptions["imageStructure"] = ({
           justifyContent: "space-between",
           marginTop: "2rem",
           paddingTop: "2rem",
-          borderTop: `1px solid ${cfg.theme.colors[colorScheme].lightgray}`,
+          borderTop: `1px solid ${cfg.theme.colors[colorScheme].depth1}`,
         }}
       >
         {/* Left side - Date and Reading Time */}
@@ -309,7 +309,7 @@ export const defaultImage: SocialImageOptions["imageStructure"] = ({
             display: "flex",
             alignItems: "center",
             gap: "2rem",
-            color: cfg.theme.colors[colorScheme].gray,
+            color: cfg.theme.colors[colorScheme].depth0,
             fontSize: 28,
           }}
         >
@@ -363,7 +363,7 @@ export const defaultImage: SocialImageOptions["imageStructure"] = ({
                 display: "flex",
                 padding: "0.5rem 1rem",
                 backgroundColor: cfg.theme.colors[colorScheme].highlight,
-                color: cfg.theme.colors[colorScheme].secondary,
+                color: cfg.theme.colors[colorScheme].accent,
                 borderRadius: "10px",
                 fontSize: 24,
               }}

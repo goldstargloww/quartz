@@ -1,20 +1,48 @@
 export interface ColorScheme {
-  light: string
-  lightgray: string
-  gray: string
-  darkgray: string
-  dark: string
-  secondary: string
-  tertiary: string
+  // surprise tool for later :3
+  [key: string]: string;
+  
+  // old colors
+  // light: string
+  // lightgray: string
+  // gray: string
+  // darkgray: string
+  // dark: string
+  // secondary: string
+  // tertiary: string
+  // highlight: string
+  // textHighlight: string
+ 
+  // text color
+  text: string // replaces darkgray and dark
+  subtext1: string // for now, unused
+  subtext0: string // see above
+ 
+  // background
+  base: string // replaces light
+  depth1: string // for now, replaces lightgray
+  depth0: string // for now, replaces gray
+ 
+  // additional theme colors 
+  red: string
+  orange: string
+  yellow: string
+  green: string
+  cyan: string
+  blue: string
+  purple: string
+ 
+  // accent and highlights
+  accent: string // for now, replaces secondary and tertiary
   highlight: string
   textHighlight: string
 }
-
+ 
 interface Colors {
   lightMode: ColorScheme
   darkMode: ColorScheme
 }
-
+ 
 export type FontSpecification =
   | string
   | {
@@ -22,7 +50,7 @@ export type FontSpecification =
       weights?: number[]
       includeItalic?: boolean
     }
-
+ 
 export interface Theme {
   typography: {
     title?: FontSpecification
@@ -143,34 +171,18 @@ export async function processGoogleFonts(
 export function joinStyles(theme: Theme, ...stylesheet: string[]) {
   return `
 ${stylesheet.join("\n\n")}
-
+ 
 :root {
-  --light: ${theme.colors.lightMode.light};
-  --lightgray: ${theme.colors.lightMode.lightgray};
-  --gray: ${theme.colors.lightMode.gray};
-  --darkgray: ${theme.colors.lightMode.darkgray};
-  --dark: ${theme.colors.lightMode.dark};
-  --secondary: ${theme.colors.lightMode.secondary};
-  --tertiary: ${theme.colors.lightMode.tertiary};
-  --highlight: ${theme.colors.lightMode.highlight};
-  --textHighlight: ${theme.colors.lightMode.textHighlight};
-
+    ${Object.keys(theme.colors.lightMode).map(x => `--${x}: ${theme.colors.lightMode[x]};`).join('\n')}
+ 
   --titleFont: "${getFontSpecificationName(theme.typography.title || theme.typography.header)}", ${DEFAULT_SANS_SERIF};
   --headerFont: "${getFontSpecificationName(theme.typography.header)}", ${DEFAULT_SANS_SERIF};
   --bodyFont: "${getFontSpecificationName(theme.typography.body)}", ${DEFAULT_SANS_SERIF};
   --codeFont: "${getFontSpecificationName(theme.typography.code)}", ${DEFAULT_MONO};
 }
-
+ 
 :root[saved-theme="dark"] {
-  --light: ${theme.colors.darkMode.light};
-  --lightgray: ${theme.colors.darkMode.lightgray};
-  --gray: ${theme.colors.darkMode.gray};
-  --darkgray: ${theme.colors.darkMode.darkgray};
-  --dark: ${theme.colors.darkMode.dark};
-  --secondary: ${theme.colors.darkMode.secondary};
-  --tertiary: ${theme.colors.darkMode.tertiary};
-  --highlight: ${theme.colors.darkMode.highlight};
-  --textHighlight: ${theme.colors.darkMode.textHighlight};
+    ${Object.keys(theme.colors.darkMode).map(x => `--${x}: ${theme.colors.darkMode[x]};`).join('\n')}
 }
 `
 }

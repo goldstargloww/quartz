@@ -89,7 +89,7 @@ function renderTranscludes(
             {
               type: "element",
               tagName: "p",
-              properties: { style: "color: var(--secondary);" },
+              properties: { style: "color: var(--accent);" },
               children: [
                 {
                   type: "text",

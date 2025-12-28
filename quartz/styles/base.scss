@@ -14,9 +14,9 @@ html {
 body {
   margin: 0;
   box-sizing: border-box;
-  background-color: var(--light);
+  background-color: var(--base);
   font-family: var(--bodyFont);
-  color: var(--darkgray);
+  color: var(--text);
 }
 
 .text-highlight {
@@ -25,8 +25,8 @@ body {
   border-radius: 5px;
 }
 ::selection {
-  background: color-mix(in srgb, var(--tertiary) 60%, rgba(255, 255, 255, 0));
-  color: var(--darkgray);
+  background: color-mix(in srgb, var(--accent) 60%, rgba(255, 255, 255, 0));
+  color: var(--text);
 }
 
 p,
@@ -42,14 +42,14 @@ ul,
 .math,
 .typst-doc,
 g[class~="typst-text"] {
-  color: var(--darkgray);
-  fill: var(--darkgray);
+  color: var(--text);
+  fill: var(--text);
   overflow-wrap: break-word;
   text-wrap: pretty;
 }
 
 path[class~="typst-shape"] {
-  stroke: var(--darkgray);
+  stroke: var(--text);
 }
 
 .math {
@@ -81,21 +81,21 @@ a {
   font-weight: $semiBoldWeight;
   text-decoration: none;
   transition: color 0.2s ease;
-  color: var(--secondary);
+  color: var(--accent);
 
   &:hover {
-    color: var(--tertiary);
+    color: var(--accent);
   }
 
   &.internal {
     text-decoration: none;
-    background-color: var(--highlight);
+    background-color: rgb(from var(--highlight) r g b / 10%);
     padding: 0 0.1rem;
     border-radius: 5px;
     line-height: 1.4rem;
 
     &.broken {
-      color: var(--secondary);
+      color: var(--accent);
       opacity: 0.5;
       transition: opacity 0.2s ease;
       &:hover {
@@ -120,7 +120,7 @@ a {
     margin: 0 0.15em;
 
     > path {
-      fill: var(--dark);
+      fill: var(--text);
     }
   }
 }
@@ -170,8 +170,8 @@ a {
 
     & li:has(> input[type="checkbox"]:checked) {
       text-decoration: line-through;
-      text-decoration-color: var(--gray);
-      color: var(--gray);
+      text-decoration-color: var(--depth0);
+      color: var(--depth0);
     }
 
     & li > * {
@@ -180,7 +180,7 @@ a {
     }
 
     p > strong {
-      color: var(--dark);
+      color: var(--text);
     }
   }
 
@@ -307,15 +307,15 @@ a {
 
 .footnotes {
   margin-top: 2rem;
-  border-top: 1px solid var(--lightgray);
+  border-top: 1px solid var(--depth1);
 }
 
 input[type="checkbox"] {
   transform: translateY(2px);
-  color: var(--secondary);
-  border: 1px solid var(--lightgray);
+  color: var(--accent);
+  border: 1px solid var(--depth1);
   border-radius: 3px;
-  background-color: var(--light);
+  background-color: var(--base);
   position: relative;
   margin-inline-end: 0.2rem;
   margin-inline-start: -1.4rem;
@@ -324,8 +324,8 @@ input[type="checkbox"] {
   height: 16px;
 
   &:checked {
-    border-color: var(--secondary);
-    background-color: var(--secondary);
+    border-color: var(--accent);
+    background-color: var(--accent);
 
     &::after {
       content: "";
@@ -335,7 +335,7 @@ input[type="checkbox"] {
       width: 4px;
       height: 8px;
       display: block;
-      border: solid var(--light);
+      border: solid var(--base);
       border-width: 0 2px 2px 0;
       transform: rotate(45deg);
     }
@@ -344,7 +344,7 @@ input[type="checkbox"] {
 
 blockquote {
   margin: 1rem 0;
-  border-left: 3px solid var(--secondary);
+  border-left: 3px solid var(--accent);
   padding-left: 1rem;
   transition: border-color 0.2s ease;
 }
@@ -357,12 +357,12 @@ h5,
 h6,
 thead {
   font-family: var(--headerFont);
-  color: var(--dark);
+  color: var(--text);
   font-weight: revert;
   margin-bottom: 0;
 
   article > & > a[role="anchor"] {
-    color: var(--dark);
+    color: var(--text);
     background-color: transparent;
   }
 }
@@ -428,11 +428,11 @@ figure[data-rehype-pretty-code-figure] {
     font-family: var(--codeFont);
     font-size: 0.9rem;
     padding: 0.1rem 0.5rem;
-    border: 1px solid var(--lightgray);
+    border: 1px solid var(--depth1);
     width: fit-content;
     border-radius: 5px;
     margin-bottom: -0.5rem;
-    color: var(--darkgray);
+    color: var(--text);
   }
 
   & > pre {
@@ -445,7 +445,7 @@ pre {
   padding: 0 0.5rem;
   border-radius: 5px;
   overflow-x: auto;
-  border: 1px solid var(--lightgray);
+  border: 1px solid var(--depth1);
   position: relative;
 
   &:has(> code.mermaid) {
@@ -473,8 +473,8 @@ pre {
       border-left: 3px solid transparent;
 
       &[data-highlighted-line] {
-        background-color: var(--highlight);
-        border-left: 3px solid var(--secondary);
+        background-color: rgb(from var(--highlight) r g b / 10%);
+        border-left: 3px solid var(--accent);
       }
 
       &::before {
@@ -500,11 +500,11 @@ pre {
 
 code {
   font-size: 0.9em;
-  color: var(--dark);
+  color: var(--text);
   font-family: var(--codeFont);
   border-radius: 5px;
   padding: 0.1rem 0.2rem;
-  background: var(--lightgray);
+  background: var(--depth1);
 }
 
 tbody,
@@ -535,7 +535,7 @@ p {
 th {
   text-align: left;
   padding: 0.4rem 0.7rem;
-  border-bottom: 2px solid var(--gray);
+  border-bottom: 2px solid var(--depth0);
 }
 
 td {
@@ -543,7 +543,7 @@ td {
 }
 
 tr {
-  border-bottom: 1px solid var(--lightgray);
+  border-bottom: 1px solid var(--depth1);
   &:last-child {
     border-bottom: none;
   }
@@ -566,7 +566,7 @@ hr {
   margin: 2rem auto;
   height: 1px;
   border: none;
-  background-color: var(--lightgray);
+  background-color: var(--depth1);
 }
 
 audio,
@@ -631,7 +631,7 @@ iframe.pdf {
   left: 0;
   width: 0;
   height: 3px;
-  background: var(--secondary);
+  background: var(--accent);
   transition: width 0.2s ease;
   z-index: 9999;
 }

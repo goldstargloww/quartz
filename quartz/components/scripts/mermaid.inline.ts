@@ -173,14 +173,14 @@ class DiagramPanZoom {
 }
 
 const cssVars = [
-  "--secondary",
-  "--tertiary",
-  "--gray",
-  "--light",
-  "--lightgray",
+  "--accent",
+  "--accent",
+  "--depth0",
+  "--base",
+  "--depth1",
   "--highlight",
-  "--dark",
-  "--darkgray",
+  "--text",
+  "--text",
   "--codeFont",
 ] as const
 
@@ -226,13 +226,13 @@ document.addEventListener("nav", async () => {
       theme: darkMode ? "dark" : "base",
       themeVariables: {
         fontFamily: computedStyleMap["--codeFont"],
-        primaryColor: computedStyleMap["--light"],
-        primaryTextColor: computedStyleMap["--darkgray"],
-        primaryBorderColor: computedStyleMap["--tertiary"],
-        lineColor: computedStyleMap["--darkgray"],
-        secondaryColor: computedStyleMap["--secondary"],
-        tertiaryColor: computedStyleMap["--tertiary"],
-        clusterBkg: computedStyleMap["--light"],
+        primaryColor: computedStyleMap["--base"],
+        primaryTextColor: computedStyleMap["--text"],
+        primaryBorderColor: computedStyleMap["--accent"],
+        lineColor: computedStyleMap["--text"],
+        secondaryColor: computedStyleMap["--accent"],
+        tertiaryColor: computedStyleMap["--accent"],
+        clusterBkg: computedStyleMap["--base"],
         edgeLabelBackground: computedStyleMap["--highlight"],
       },
     })
