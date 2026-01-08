@@ -1,0 +1,5 @@
+# This directory is a Syncthing folder marker.
+# Do not delete.
+
+folderID: tscax-icyuz
+created: 2026-01-07T00:41:07-05:00
