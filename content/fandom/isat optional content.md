@@ -21,7 +21,7 @@ this page will contain a series of hints for things you should check out at cert
 
 **each time you start an Act, check its section on this page.** you can find out what Act you're on in the save menu, but each Act's section here will also tell you what to look out for when the next Act starts. Acts are pretty important to this game's mechanics, as they're the main factor in what things change when.
 
-Act 1 doesn't have anything super important missable content in it, so we'll start off with Act 2.
+Act 1 doesn't have any super important missable content in it, so we'll start off with Act 2.
 
 > [!attention] ACT 2 LANDMARK
 > Act 2 starts on Loop 1, after Siffrin's first death.
