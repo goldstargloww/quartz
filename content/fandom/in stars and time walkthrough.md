@@ -7,7 +7,11 @@ authors:
 tags:
   - tutorial
   - fandom/in-stars-and-time
+  - wip
 ---
+> [!warning] THIS IS A WIP
+> i'm nowhere near done with this yet !!!
+
 chances are you're here because someone told you to play In Stars and Time. that person might've been me. hi! you are going to play in stars and time now enjoy
 
 # beginning notes
