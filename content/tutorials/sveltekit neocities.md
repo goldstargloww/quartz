@@ -8,6 +8,7 @@ tags:
   - svelte
   - neocities
   - technical
+  - tutorial
 ---
 here's a tutorial for getting [SvelteKit](https://svelte.dev/) sites onto [Neocities](https://neocities.org/)! you don't need any prior experience with SvelteKit or Neocities before following along, but i'm only going to get you started. you'll likely want to take a look at the [SvelteKit documentation](https://svelte.dev/docs) afterwards if you're new here.
 
@@ -31,7 +32,6 @@ if you don't have it yet, the way you get it depends on your operating system:
 ### Windows
 
 download the prebuilt version from [here](https://nodejs.org/en/download) (.msi) and run the installer. when you get to the custom setup section, choose "npm package manager"\*. run through the rest of the installer.
-<br><span class="sgos-note">* i don't know if you actually <em>need</em> to do this?? but <em>i</em> needed to, so. shrug. doesn't hurt, right?</span>
 
 when you're done, open up a new terminal and run `node -v`, which should return a version number. if that works, run `npm -v`.
 
@@ -40,7 +40,7 @@ if `npm -v` doesn't work and instead you get a message like the following:
 npm : File C:\Program Files\nodejs\npm.ps1 cannot be loaded because running scripts is disabled on this system. For
 more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
 ```
-run this command:
+run this command in powershell:
 ```bash
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
@@ -57,8 +57,8 @@ run `npm -v` to verify your installation, and if it works, you're all set!
 ### Linux
 
 on Linux, Node.js is fairly easy to install with a package manager:
-- Ubuntu/Debian: `sudo apt install nodejs npm`
-- Arch: `sudo pacman -S nodejs npm`
+- apt: `sudo apt install nodejs npm`
+- pacman: `sudo pacman -S nodejs npm`
 
 or you can check [here](https://www.geeksforgeeks.org/node-js/installation-of-node-js-on-linux/#) for alternatives.
 

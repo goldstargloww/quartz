@@ -7,6 +7,8 @@ authors:
 tags:
   - aac
   - technical
+  - documentation
+  - wip
 ---
 > [!warning] this page is a heavy work in progress!
 > TD Snap is closed source and does not document the way the app works. i'm having to reverse engineer all of this myself through trial and error.
@@ -21,7 +23,7 @@ decimal version of a signed two's complement hex code, AARRGGBB.
 
 in Google Sheets, at least, you can convert to hex code with the formula `=RIGHT(DEC2HEX(number),8)`
 
-# pagesets (.spb)
+# page bundles (.spb)
 
 ## SyncData
 

@@ -59,3 +59,31 @@ h6 {
 a.internal.tag-link {
     background-color: rgb(from var(--highlight) r g b / 10%)
 }
+
+img {
+    display: block;
+    margin: auto;
+}
+
+.isat-achievement {
+    display: flex;
+	align-items: center;
+	margin: auto;
+    width: fit-content;
+    padding: 1em;
+    border-radius: 5px;
+    background-color: var(--depth1);
+    & * {
+        flex: 0 auto;
+        & p {
+            margin: 0.5em;
+            &:first-child {
+                font-size: 1.2em;
+                color: var(--highlight);
+            }
+        }
+    }
+    & img {
+        margin: 1em;
+    }
+}
